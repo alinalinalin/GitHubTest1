@@ -1,0 +1,287 @@
+APP_NAME=CrmWeb
+####\u6570\u636e\u5e93\u8fde\u63a5\u65b9\u5f0f\uff0c\u662f\u5426\u91c7\u7528\u76f4\u8fde\uff0c\u9ed8\u8ba4\u4e3afalse,\u91c7\u7528\u6570\u636e\u6e90\u65b9\u5f0f\u83b7\u53d6\u8fde\u63a5
+DIRECT_CONNECTION=false
+
+#\u63a5\u53e3\u673a\u8bbf\u95ee\u5730\u5740
+IF_RMI_ADD = 132.163.9.141:8888
+
+#IIOP\u63a5\u53e3\u673a\u5730\u5740
+IIOP_RMI_ADD = t3://132.163.9.165:9005
+
+#\u65b0\u95fb\u516c\u544a\u9644\u4ef6\u7684\u5927\u5c0f\u9650\u5236(\u5355\u4f4d\u4e3aK)
+PB_FILE_MAX_SIZE = 2000
+#\u8d85\u7ea7\u7ba1\u7406\u5458\u5de5\u53f7
+SUPER_STAFF_CODE = 1010101
+#\u5de5\u53f7\u521d\u59cb\u5bc6\u7801
+STAFF_PWD = EE0DF4FBE10E344D
+#\u5ba2\u6237\u521d\u59cb\u5316\u5bc6\u7801
+CUST_PWD = FCA0FE2599BC893E
+#\u5e10\u6237\u521d\u59cb\u5316\u5bc6\u7801
+ACCTPASSWD_DLT = 111111
+#\u5ba2\u6237\u67e5\u8be2\u521d\u59cb\u5316\u5bc6\u7801
+CUSTQRYPWD_DLT = FCA0FE2599BC893E
+#\u5ba2\u6237\u53d8\u66f4\u521d\u59cb\u5316\u5bc6\u7801
+CUSTALTPWD_DLT = FCA0FE2599BC893E
+#\u5168\u5ba2\u6237\u521d\u59cb\u5316\u5bc6\u7801
+CUSTPWD_DLT    = FCA0FE2599BC893E
+#\u70ed\u5356\u5546\u54c1\u65f6\u95f4\u7edf\u8ba1\u8303\u56f4(N\u5929\u5185)
+HOT_SALE_STAT_DAYS = 7
+#\u70ed\u5356\u5546\u54c1\u7edf\u8ba1\u6570\u91cf(\u524d\uff11\uff10\u4e2a)
+HOT_SALE_STAT_COUNT = 10
+
+#\u4e0a\u4f20\u6587\u4ef6\u5927\u5c0f(\u4e00\u822c\u8bbe\u7f6e10M\u5de6\u53f3\uff0c\u5355\u4f4dbyte)
+MAX_UPLOAD_SIZE = 10240000
+
+
+#NOT_FILTER_PAFGES = index.jsp,base/updatePassword.jsp,CrmWebFor10000.jsp,CallCSPrdBook.jsp,nchjs/csPreBookMod.jsp,business/accept/fee/AuditingPrintInfoNewTwice.jsp,business/accept/fee/printInvoice.jsp,coupons/printCouponsInfo.jsp,coupons/printDevCoupon.jsp
+NOT_FILTER_PAFGES = down.jsp,index.jsp,base/updatePassword.jsp,CrmWebFor10000.jsp,CallCSPrdBook.jsp,nchjs/csPreBookMod.jsp,business/accept/fee/AuditingPrintInfoNewTwice.jsp,business/accept/fee/printInvoice.jsp,coupons/printCouponsInfo.jsp,coupons/printDevCoupon.jsp,business/agreement/manage/view/agreeViewForPpm.jsp,coupons/filedownload.jsp,business/accept/management/DownLoadExcelFile.jsp
+####################   \u540e\u53f0\u6846\u67b6\u7cfb\u7edf\u53c2\u6570\u914d\u7f6e   BEGIN ####################
+##ProjectMode 0:Development Mode; 1:Product Mode
+ProjectMode=1
+#\u6846\u67b6\u6570\u636e\u662f\u5426\u5b58\u653e\u5185\u5b58
+FrameDataInMem=true
+#\u6570\u636e\u5e93\u7c7b\u578b
+DBType=Oracle
+#write log or not to DataBase's table
+ErrToDB=true
+#write or not write msg to terminal
+PrintTerminal=true
+IsoToGBK=false
+GbkToISO=false
+LoadClassPath=d\:PowerIBSSgzibssclasses
+XATransactionTime=60
+##set eai create xml encondig , the default is gb2312
+UseEAI=false
+EaiEncoding=GB2312
+LogEAIMsg=true
+UseLDAP=false
+#<!--LogType 0:termial 1:file-->
+LogType=0
+WebPath=
+LogPath=/bea/PowerTEST/log/
+#<!--system gc period(minute). -1 mean no gc-->
+GcPeriod=10
+#<!--
+#<XATransactionTime 60
+#<Monitor
+#<DBType
+#<ConsumeSecs
+#<UploadFilePath
+
+#<Monitor/
+#<	TopTen
+#<	LogPath
+#<-->
+LOG4J_FILE=
+####################   \u540e\u53f0\u6846\u67b6\u7cfb\u7edf\u53c2\u6570\u914d\u7f6e   END ####################
+
+
+##======================================== \u76f4\u8fde\u6570\u636e\u5e93\u914d\u7f6e\u4fe1\u606f(Default\u3001LogDB\u662f\u5fc5\u987b\u5177\u5907\u7684) ==========================================###
+###DAOUtils.DIRECT_CONNECTION=true\u91c7\u7528\u76f4\u8fde\u65b9\u5f0f\u83b7\u53d6\u6570\u636e\u5e93\u8fde\u63a5
+
+# CRMDB \u76f4\u8fde
+#CRMDB_Driver = oracle.jdbc.driver.OracleDriver
+#CRMDB_DBUrl = jdbc:oracle:thin:@10.40.199.143:1521:crmkf
+#CRMDB_DBUser = crmdb
+#CRMDB_DBPwd = crmdb
+#CRMDB_DBMax = 30
+
+# Default \u76f4\u8fde
+#DEFAULT_Driver = oracle.jdbc.driver.OracleDriver
+#DEFAULT_DBUrl = jdbc:oracle:thin:@10.40.199.143:1521:crmkf
+#DEFAULT_DBUser = crmdb
+#DEFAULT_DBPwd = crmdb
+#DEFAULT_DBMax = 30
+
+# LogDB \u76f4\u8fde
+#LOGDB_Driver = oracle.jdbc.driver.OracleDriver
+#LOGDB_DBUrl = jdbc:oracle:thin:@10.40.199.143:1521:crmkf
+#LOGDB_DBUser = crmdb
+#LOGDB_DBPwd = crmdb
+#LOGDB_DBMax = 30
+
+########----\u73b0\u573a----################
+
+
+# CRMDB \u76f4\u8fde   \u5f00\u53d1\u73af\u5883
+CRMDB_Driver = oracle.jdbc.driver.OracleDriver
+CRMDB_DBUrl = jdbc:oracle:thin:@10.45.47.106:1521:bssdb106
+CRMDB_DBUser = CRMDB_FW
+CRMDB_DBPwd = CRMDB_FW
+CRMDB_DBMax = 30
+CRMDB_maxPoolSize=30
+CRMDB_maxStatements=30
+CRMDB_idleTestPeriod=30
+CRMDB_maxidletime=30
+
+# CRMDB \u76f4\u8fde   \u6d4b\u8bd5\u73af\u5883
+#CRMDB_Driver = oracle.jdbc.driver.OracleDriver
+#CRMDB_DBUrl = jdbc:oracle:thin:@134.224.40.134:1521:CHDB
+#CRMDB_DBUser = crmdb
+#CRMDB_DBPwd = crmdb
+#CRMDB_DBMax = 30
+# \u8fde\u63a5\u5730\u5740\u5e93\u7528\uff0c\u6d4b\u8bd5\u7528
+CSSS_YJ_Driver = oracle.jdbc.driver.OracleDriver
+CSSS_YJ_DBUrl = jdbc:oracle:thin:@10.45.47.106:1521:bssdb106
+CSSS_YJ_DBUser = CRMDB_FW
+CSSS_YJ_DBPwd = CRMDB_FW
+CSSS_YJ_DBMax = 30
+# Default \u76f4\u8fde
+DEFAULT_Driver = oracle.jdbc.driver.OracleDriver
+DEFAULT_DBUrl = jdbc:oracle:thin:@10.45.47.106:1521:bssdb106
+DEFAULT_DBUser = CRMDB_FW
+DEFAULT_DBPwd = CRMDB_FW
+DEFAULT_DBMax = 30
+DEFAULT_maxPoolSize=30
+DEFAULT_maxStatements=30
+DEFAULT_idleTestPeriod=30
+DEFAULT_maxidletime=30
+
+# LogDB \u76f4\u8fde
+LOGDB_Driver = oracle.jdbc.driver.OracleDriver
+LOGDB_DBUrl = jdbc:oracle:thin:@10.45.47.106:1521:bssdb106
+LOGDB_DBUser = CRMDB_FW
+LOGDB_DBPwd = CRMDB_FW
+LOGDB_DBMax = 30
+LOGDB_maxPoolSize=30
+LOGDB_maxStatements=30
+LOGDB_idleTestPeriod=30
+LOGDB_maxidletime=30
+
+
+# EAI
+EAI_Driver=oracle.jdbc.driver.OracleDriver
+EAI_DBUrl = jdbc:oracle:thin:@134.224.60.41:1521:jxods2
+EAI_DBUser = ods
+EAI_DBPwd = ods40$
+EAI_DBMax = 30
+
+###====================================DataSource JNDI \u58f0\u660e java:comp/env/jdbc/ ===============================================####
+
+##\u6846\u67b6\u6570\u636e\u4f7f\u7528\u6570\u636e\u6e90JNDI(Default\u3001LogDB)
+DEFAULT_JNDI= java:comp/env/jdbc/crmdb
+DEFAULT_XAType=false
+
+CMDB_JNDI= java:comp/env/jdbc/crmdb
+DEFAULT_XAType=false
+
+
+LOGDB_JNDI= java:comp/env/jdbc/crmdb
+LOGDB_XAType=false
+
+#\u4e1a\u52a1\u5904\u7406\u6570\u636e\u6e90JNDI
+CRMDB_JNDI= java:comp/env/jdbc/crmdb
+CRMDB_XAType=false
+
+#\u8c03\u5916\u7cfb\u7edf\u63a5\u53e3\u65e5\u5fd7\u5199\u5386\u53f2\u5e93\u6570\u636e\u6e90JNDI
+HISDB_JNDI=java:comp/env/jdbc/hiscrmdb  
+HISDB_XAType=false
+
+###\u4e0b\u9762\u4e24\u4e2a\u6570\u636e\u6e90\u4e3a\u6d4b\u8bd5\u4f7f\u7528
+CHNDB_JNDI= java:comp/env/jdbc/chndb
+CHNDB_XAType=false
+
+crm1_JNDI= jdbc/crmdb
+crm1_XAType=false
+
+
+IOM_JNDI = jdbc/iom
+crm2_XAType=false
+
+##IOM\u6570\u636e\u6e90
+EAI_JNDI = jdbc/eai
+crm2_XAType=false
+
+##\u63a5\u53e3\u6d4b\u8bd5\u6570\u636e\u6e90
+CRMJK_JNDI = jdbc/crmjk
+CRMJK_XAType=false
+
+CSSSJK_JNDI = jdbc/csssjk
+CSSSJK_XAType=false
+
+CSSS_YJ_JNDI=jdbc/csss_yj
+CSSS_YJ_XAType=false
+
+crm2_JNDI=jdbc/crmdb
+crm2_XAType=false
+
+#\u81ea\u52a8\u4e1a\u52a1\u5de5\u53f7
+AUTO_BUSINESS_STAFF_CODE = system
+#\u81ea\u52a8\u4e1a\u52a1\u5de5\u53f7ID
+AUTO_BUSINESS_STAFF_ID = 43
+
+#\u6253\u5370sql
+SHOW_SQL = true
+#\u6253\u5370Service\u65b9\u6cd5\u7684\u6267\u884c\u65f6\u95f4
+SHOW_METHOD_TIME = true
+
+#\u77e5\u8bc6\u5e93\u4f7f\u7528\u5230\u7684\u914d\u7f6e\u53c2\u6570,\u5206\u522b\u662f\u67e5\u8be2\u548c\u7ba1\u7406\u7684\u5de5\u53f7\u548c\u5bc6\u7801:
+ACK_QUERY_STAFF_CODE = 4501
+ACK_MANAGER_STAFF_CODE = 4500
+ACK_QUERY_STAFF_PWD = FE0858FC40CD12FD
+ACK_MANAGER_STAFF_PWD = FE0858FC40CD12FD
+
+
+#\u67e5\u8be2\u6700\u5927\u8bb0\u5f55\u6570\u9650\u5236
+MAX_QUERY_SIZE = 3000
+
+#\u767b\u9646\u7c7b\u578b\uff0c0\u8868\u793a\u901a\u8fc7\u9274\u6743\u670d\u52a1\u5668\u767b\u9646\uff0c1\u8868\u793a\u901a\u8fc7SQL\u76f4\u63a5\u67e5\u8be2\u6570\u636e\u5e93\u8fdb\u884c\u767b\u9646
+SIGN_ON_TYPE = 1
+
+#\u7cfb\u7edf\u5f53\u524d\u7684\u6570\u636e\u5e93\u7c7b\u578b
+DATABASE_TYPE = ORACLE
+
+#\u7cfb\u7edf\u9879\u76ee\u7f16\u7801\u5982TIANJIN,CHONGQING\u7b49
+PROJECT_CODE = TIANJIN
+
+#\u6570\u636e\u7528\u6237
+SYSTEM_DATABASE_USER="crmdb,proddb,acctdb,custdb"
+
+#\u5b9e\u540d\u5236\u9700\u8981\u7684FTP\u53c2\u6570
+ID_CARD_FTP_IP=132.163.9.160
+
+ID_CARD_FTP_USER=weblogic
+
+ID_CARD_FTP_PASSWORD=weblogic
+
+ID_CARD_FTP_DIR=DomainCRM/upload
+
+# IOM\u73af\u8282\u4fe1\u606f\u56de\u586b
+
+IOM_TACHE_INFO_IP = 132.163.9.161:8003
+
+#IOM\u8ba2\u5355\u6d41\u7a0b\u67e5\u770b\u5730\u5740
+IOM_ORDER_STATE_URL =http\://10.40.198.123\:7005/IOMPROJ/orderflow/orderflow.htm?crmSoId\=
+#\u8bbe\u7f6e\u7d22\u5f15\u6570\u636e\u5b58\u653e\u7684\u76ee\u5f55
+LUCENE_INDEX_FILE = d:\\save
+PAGE_SIZE = 100000
+MERGE_FACTOR = 2000
+RAM_MAX_FILES = 10000
+CHARTER_LENGTH = 30
+TOP_NUM = 10
+
+
+#\u9650\u5236\u4ece\u6570\u636e\u5e93\u8bfb\u53d6\u8bb0\u5f55\u6761\u6570\u7684\u6700\u5927\u503c
+DB_GET_LIST_MAX_NUM = 3000
+
+#\u9500\u552e\u54c1\u76f8\u5173\u7f13\u5b58\u5927\u5c0f
+OFFER_INFO_CACHE_MAX_NUM = 5000
+#\u4ea7\u54c1\u76f8\u5173\u7f13\u5b58\u5927\u5c0f
+PRODUCT_INFO_CACHE_MAX_NUM = 1000
+#\u5e10\u6237\u89c4\u683c\u7f13\u5b58\u5927\u5c0f
+ACCOUNT_SPEC_CACHE_MAX_NUM = 1000
+#DC_PUBLIC\u7f13\u5b58\u5927\u5c0f
+DC_PUBLIC_CACHE_MAX_NUM = 1000
+#\u9500\u552e\u54c1\u5b9e\u4f8b\u53c2\u4e0e\u4eba
+INST_PARTY_CACHE_MAX_NUM = 1000
+#\u670d\u52a1\u63d0\u4f9b\u8303\u56f4\u63a7\u5236\u8868
+SERVICE_CONTROL_SCOPES_CACHE_MAX_NUM = 1000
+#specCache
+OTHER_SPEC_CACHE_MAX_NUM = 1000
+#\u670d\u52a1\u63d0\u4f9b\u7f13\u5b58\u5927\u5c0f
+SERVICE_OFFER_CACHE_MAX_NUM = 1000
+ATTR_RULE_CACHE_MAX_NUM = 6000
+ATTR_RULE_CACHE_FLAG = T
+SECURITY_LOG_CONFIG = 2000
+SECURITY_LOG_PARAM_CONFIG = 2000
+MUTEX_OFFER_CACHE_MAX_NUM = 8000
